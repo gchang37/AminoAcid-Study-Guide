@@ -1,0 +1,66 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+
+h1, h2, h3{
+	font-family: roboto;
+}
+h3{
+	display: inline;
+	padding: 1.5rem;
+	text-align: center;
+}
+
+body{
+	margin: auto;
+	background-color: azure;
+	max-width: 1500px;
+}
+.progress div{
+	width:100%;
+	display: inline-block;
+	float: left;
+}
+.progress p{
+	display: inline-block;
+	width:50%;
+	margin: auto;
+}
+.questions{
+	width: 85%;
+}
+.questions h2{
+	text-align: center;
+}
+.questions img{
+	padding-left: 25vw;
+}
+.options{
+	float:right;
+	display: block;
+	width: 15%;
+	background-color: snow;
+	border:1px solid black;
+}
+#options img{
+	display: inline-block;
+	width: 20%;
+	padding: 1rem;
+}
+fieldset{
+	display: inline-block;
+	float: right;
+}
+#dropBox{
+	display: inline-block;
+	width: 350px;
+	height: 170px;
+	margin: 2rem;
+	margin-bottom: 0;
+	border: 1px solid lightgrey;
+	background-color: white;
+}
+#solution{
+	display: inline-block;
+}
+#psolution{
+	display: inline-block;
+}

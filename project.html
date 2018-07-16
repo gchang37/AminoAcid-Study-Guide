@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Amino Acid Study Guide</title>
+    <link rel="stylesheet" type="text/css" href="project.css">
+    <script src="project.js" type="text/javascript" defer></script>
+  </head>
+  <body>
+    <section class="progress">
+      <div>
+        <h3>Number of amino acid known: </h3>
+        <h3 id="correctAns1"></h3>
+        <h3>Number of guesses: </h3>
+        <h3 id="wrongAns1"></h3>
+        <h3>Number of amino acid properties known:</h3>
+        <h3 id="correctAns2"></h3>
+         <h3>Number of guesses per amino acid properties not known:</h3>
+        <h3 id="wrongAns2"></h3>
+        </div>
+     <!-- keep track of score -->
+    <div class="questions">
+      <img src="baseGrp.PNG" alt="baseGroup">
+      <h2>Match the R-group to the following one-letter code for amino acid: <span id="question"> </span></h2>
+      
+    </div><!-- questions generated -->
+    </section>
+    <form>
+      <fieldset> 
+        <legend> Properties associated with the Amino Acid: </legend>
+        <input type="checkbox" name="properties" id="aliphatic" value="aliphatic">Aliphatic<br>
+        <input type="checkbox" name="properties" id="basic" value="basic">Basic<br>
+         <input type="checkbox" name="properties" id="hydrophilic" value="hydrophilic">Hydrophilic<br>
+        <input type="checkbox" name="properties" id="hydrophobic" value="hydrophobic">Hydrophobic<br>
+        <input type="checkbox" name="properties" id="interactive" value="interactive">Interacts with Surface Protein<br>
+        <input type="checkbox" name="properties" id="ionizable" value="ionizable">Ionizable<br>
+        <input type="checkbox" name="properties" id="non-polar" value="non-polar">Non-Polar<br>
+         <input type="checkbox" name="properties" id="non-reactive" value="non-reactive">Non-reactive<br>
+        <input type="checkbox" name="properties" id="polar" value="polar">Polar<br>
+      </fieldset>
+    </form>
+    <div id="options" ondrop="drop(event)" ondragover="allowDrop(event)">
+      <fieldset>
+        <legend> Potential R-group of the 1-letter code: </legend>
+      <img id="alanine" src="Alanine.PNG" draggable="true" ondragstart="drag(event)"  alt="alanine">
+      <img draggable="true" ondragstart="drag(event)" id="arginine" src="arginineSide.PNG" alt="R-group of arginine">
+      <img draggable="true" ondragstart="drag(event)" id="serine" src="serineSide.PNG" alt="R-group of serineSide">
+      <img draggable="true" ondragstart="drag(event)" id="glutamine" src="glutamineSide.PNG" alt="R-group of glutamine">
+      <img draggable="true" ondragstart="drag(event)" id="glycine" src="glycineSide.PNG" alt="R-group of glycine">
+      <img draggable="true" ondragstart="drag(event)" id="histidine" src="histidineSide.PNG" alt="R-group of histidine">
+       <img draggable="true" ondragstart="drag(event)" id="proline" src="proline.PNG" alt="proline">
+       </fieldset>
+    </div><!-- options presented -->
+    
+    <div id="dropBox" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+    <button type="button" onclick="checkAnswer()"> Submit </button>
+    <fieldset id="solutionBox">
+      <legend> Full Solution to the Amino Acid: </legend>
+    <div id="solution">
+    <ul id="psolution"></ul></div>
+    <button type="button" onclick="showSolution()"> Show Solution </button>
+    </fieldset>
+    <button type="button" onclick="generateNextQuestion()"> Start / Next Question </button>
+    
+
+
+  </body>
+</html>
